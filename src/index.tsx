@@ -7,61 +7,38 @@ import './index.css';
 import HomePage from './components/auth/HomePage';
 import RegisterPage from './components/auth/RegisterPage';
 import LoginPage from './components/auth/LoginPage';
-import AddStock from './components/SellerPage';
 import 'semantic-ui-css/semantic.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import AvailableStock from './components/Buyer';
-import {TodoList} from './TodoList';
-import AddTodoForm from './AddTodoForm';
-import Order from './components/Order';
+
 import Report from './components/Report';
 import Footer from './components/Footer';
 import './styles/HomePage.css';
 import './styles/Navbar.css';
 import './styles/Footer.css'
 import AppApi from "./components/utils/Api";
+import App from './App';
+import Seller from './components/seller';
+import Sales from './components/SalePage';
+import Logistics from './components/Logistics';
+import ShoppingCartIcon from './components/Buyer';
 // import { AddTodoForm } from './AddTodoForm';
-const initialTodos: Todo[] = [
-    {text: 'Walk the dog', complete: false,}, {text: 'Write app', complete: true,},
-];
-
-function App() {
-    const [todos, setTodos] = useState(initialTodos);
-
-    const toggleTodo: ToggleTodo = (selectedTodo: Todo) => {
-        const newTodos = todos.map(todo => {
-            if (todo === selectedTodo) {
-                return {...todo, complete: !todo.complete,};
-            }
-            return todo;
-        });
-        setTodos(newTodos);
-    };
-
-    const addTodo: AddTodo = (text: string) => {
-        const newTodo = {text, complete: false};
-        setTodos([...todos, newTodo]);
-    };
-
-    return (
-        <>
-            <TodoList todos={todos} toggleTodo={toggleTodo}/>
-            <AddTodoForm addTodo={addTodo}/>
-        </>
-    );
-}
 
 export default App;
+
+
 
 const routes = mount({
     "/": route({title: 'Home', view: <HomePage/>}),
     "login": route({title: 'Login', view: <LoginPage/>}),
     "register": route({title: 'Register', view: <RegisterPage/>}),
-    "seller": route({title: 'Product', view: <AddStock/>}),
-    "buyer": route({title: 'ProductProp', view: <AvailableStock/>}),
-    "order": route({title: 'Order', view: <Order/>}),
+    "seller": route({title: 'Product', view: <Seller/>}),
+    "sales": route({title: 'Product', view: <Sales/>}),
+    "buyer": route({title: 'ProductProp', view: <ShoppingCartIcon />}),
+   
     "report": route({title: 'Report', view: <Report/>}),
-    "footer": route({title: 'Report', view: <Footer/>})
+    "footer": route({title: 'Report', view: <Footer/>}),
+    "logistics": route({title: 'Report', view: <Logistics/>}),
+
 })
 
 ReactDOM.render(

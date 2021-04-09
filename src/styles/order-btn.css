@@ -1,0 +1,26 @@
+.order-btn{
+  display: inline-block;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #666;
+  
+}
+
+.order-btn:hover {background-color: #3e8e41}
+
+.order-btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.order-row{
+    margin-top: 70px;
+}

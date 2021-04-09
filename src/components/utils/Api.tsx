@@ -65,4 +65,15 @@ export class Request {
         return axios({method: 'get', url: 'stock/get', params: params});
     }
 
+    static modify_user_role(data: {
+        business_id: number, email_address: string, user_role:string
+    }) {
+        return axios({method: 'post', url: 'users/bussiness_update_role', data: this.get_data(data)});
+    }
+
+    static get_business_users(params: {business_id: number}) {
+        
+        return axios({method: 'get', url: 'users/business/users_list',params:  params});
+    }
+
 }

@@ -1,4 +1,7 @@
 export default class AppUtils {
+    // static is_valid_float_number(arg0: string) {
+    //   throw new Error('Method not implemented.');
+    // }
     public static is_valid_name(name: string): boolean {
         const regex = /^([a-zA-Z]{2,20})$/
         return regex.test(name)

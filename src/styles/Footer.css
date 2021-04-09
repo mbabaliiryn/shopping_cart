@@ -9,13 +9,14 @@
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background: #111;
+    height: 5vh;
+    background: rgb(65, 28, 2);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.footer-main .box{
+/* .footer-main .box{
     flex-basis: 50%;
     padding: 10px 20px;
 
@@ -49,5 +50,5 @@ h2{
 }
 .left .content .social a span:hover{
     background: #f12020;
-}
+} */
 

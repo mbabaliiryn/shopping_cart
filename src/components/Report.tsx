@@ -15,14 +15,13 @@ interface ReportForm {
 export default function Report() {
     return (
         <div>
-            <nav>
+            <nav className="sticky-top">
                 <input type="checkbox" id="check"/>
                 <label className="checkbtn">
                     <i className="fas fa-bar"></i>
                 </label>
-                <label className="logo"><a href="/">Rooms Application</a></label>
                 <ul>
-                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/">Logout</a></li>
                 </ul>
             </nav>
             <Container>

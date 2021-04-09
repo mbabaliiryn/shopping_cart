@@ -1,0 +1,49 @@
+.seller-main{
+    margin-top: 100px;
+    background: white;
+}
+
+.sales-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 700px;
+}
+
+.list-group-item {
+    position: fixed;
+    width: 75%;
+    height: 100vh;
+    left: 250px;
+    top: 100px;
+    background: rgb(100, 98, 131);
+    z-index: 10000;
+  }
+  
+  .drawer-s.open{
+    right: 0px;
+  }
+
+  .user-table{
+    width: 200px;
+  }
+
+  .list-group-item.active a {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+.list-group-item.active a:hover{
+    color: #FFF;
+    text-transform: capitalize;
+    text-decoration: none;
+
+}
+
+.assign-btn{
+  display: flex;
+ 
+
+}
+  

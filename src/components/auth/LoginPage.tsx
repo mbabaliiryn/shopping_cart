@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Button} from 'semantic-ui-react';
+import {Form, Button, Container} from 'semantic-ui-react';
 import Footer from '../Footer'
 import {Request} from "../utils/Api";
 import {UserRoles} from "./RegisterPage";
@@ -12,10 +12,13 @@ interface Login {
 
 }
 
+
 export default function LoginPage() {
     const [login, setLogin] = React.useState({credential: '', password: ''})
     const [error, setError] = React.useState("")
+    const [role, setRole] = React.useState("")
 
+   
     const continue_login = () => {
         //todo show some loading progress
         //todo data validation
@@ -59,16 +62,19 @@ export default function LoginPage() {
             })
     }
 
+
     return (
         <div>
-            <nav>
+            <nav className="sticky-top">
                 <input type="checkbox" id="check"/>
                 <label className="checkbtn">
                     <i className="fas fa-bar"/>
                 </label>
                 <label className="logo"><a href="/">Rooms Application</a></label>
             </nav>
-            <Form className="col-md-6 w-50 m-auto">
+            <div className="login-main">
+                <Container>
+            <Form className="col-md-6 w-50 ">
                 <h1>Login to your account</h1>
                 <Form.Field>
                     <label>Email Address or Phone Number</label>
@@ -86,6 +92,8 @@ export default function LoginPage() {
                 </Form.Field>
                 <Button type='submit' value="Login" onClick={continue_login}>Login</Button>
             </Form>
+            </Container>
+            </div>
             <Footer/>
         </div>
     )

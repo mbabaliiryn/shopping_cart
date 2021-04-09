@@ -77,8 +77,10 @@ export default function RegisterPage() {
                                 localStorage.setItem("user_token", response.data.user_token)
 
                                 if (register.userType === 'buyer') {
+                                    window.location.replace('/buyer')
                                     //dashboard to a seller
                                 } else if (register.userType === 'seller') {
+                                    window.location.replace('/seller')
                                     //A seller only or both roles can have the same dashboard as a seller
                                 }
                                 break

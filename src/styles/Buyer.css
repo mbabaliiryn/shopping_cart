@@ -1,0 +1,89 @@
+.buyer-main{
+    margin-top: 100px;
+}
+input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+
+  .search-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: rgb(161, 2, 2);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .search-container button:hover {
+    background: rgb(163, 7, 7);
+  }
+
+@media screen and (max-width: 600px) {
+    .search-container {
+      float: none;
+    }
+    input[type=text], .search-container button {
+      float: none;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    input[type=text] {
+      border: 1px solid rgb(153, 8, 8);  
+    }
+}
+
+
+.drawer{
+  position: fixed;
+  width: 400px;
+  height: 100vh;
+  right: -400px;
+  top: 0px;
+  background: rgb(100, 98, 131);
+  z-index: 10000;
+}
+
+.drawer.open{
+  right: 0px;
+}
+
+.cart-header{
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-cart{
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-cart span{
+  position: absolute;
+  top: -12px;
+  right: -7px;
+  background: crimson;
+  font-size: 10px;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.close{
+  cursor: pointer;
+  display: none;
+}
+
+@media(max-width: 650px){
+  .close{
+    display: block ;
+  }
+}
